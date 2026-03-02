@@ -6,7 +6,7 @@
 #    By: Guille <Guille@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/08 07:53:27 by Guille            #+#    #+#              #
-#    Updated: 2026/03/02 19:40:46 by Guille           ###   ########.fr        #
+#    Updated: 2026/03/02 19:43:56 by Guille           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ $(OBJDIR)/%.o: %.cpp | $(OBJDIR)
 	$(CXX) $(CXXFLAGS) $(DEPFLAGS) -c $< -o $@
 -include $(DEPS)
 clean:
-	rm -rf $(OBJDIR)
+	rm -rf $(OBJDIR) home_shrubbery
 
 fclean: clean
 	rm -f $(NAME)
