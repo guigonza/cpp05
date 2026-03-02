@@ -6,7 +6,7 @@
 #    By: Guille <Guille@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/08 07:53:27 by Guille            #+#    #+#              #
-#    Updated: 2026/03/02 23:23:19 by Guille           ###   ########.fr        #
+#    Updated: 2026/03/02 23:23:12 by Guille           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 DEPFLAGS = -MMD -MP
 SRCS = 	main.cpp	Bureaucrat.cpp	\
 		AForm.cpp	ShrubberyCreationForm.cpp	\
-		RobotomyRequestForm.cpp	PresidentialPardonForm.cpp
+		RobotomyRequestForm.cpp	PresidentialPardonForm.cpp Intern.cpp
 
 OBJDIR = obj
 OBJS = $(addprefix $(OBJDIR)/, $(SRCS:.cpp=.o))

@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
+/*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Guille <Guille@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/02 19:15:51 by Guille            #+#    #+#             */
-/*   Updated: 2026/03/02 22:36:41 by Guille           ###   ########.fr       */
+/*   Created: 2026/03/02 22:50:28 by Guille            #+#    #+#             */
+/*   Updated: 2026/03/02 22:50:30 by Guille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRESIDENTIALPARDONFORM_HPP
-#define PRESIDENTIALPARDONFORM_HPP
+#ifndef INTERN_HPP
+#define INTERN_HPP
 
-#include "AForm.hpp"
 #include <string>
+#include <exception>
+#include "AForm.hpp"
 
-class PresidentialPardonForm : public AForm
+class Intern 
 {
-	private:
-		std::string _target;
-
 	public:
-		PresidentialPardonForm(const std::string& target);
-		PresidentialPardonForm(const PresidentialPardonForm& other);
-		PresidentialPardonForm& operator=(const PresidentialPardonForm& other);
-		virtual ~PresidentialPardonForm();
+		Intern();
+		Intern(const Intern& other);
+		Intern& operator=(const Intern& other);
+		~Intern();
 
-		virtual void executeAction() const;
+		AForm* makeForm(const std::string& formName, const std::string& target) const;
+
+    class UnknownFormException : public std::exception 
+	{
+		public:
+			virtual const char* what() const throw();
+    };
 };
 
 #endif

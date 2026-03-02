@@ -6,7 +6,7 @@
 /*   By: Guille <Guille@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 19:15:55 by Guille            #+#    #+#             */
-/*   Updated: 2026/03/02 23:29:34 by Guille           ###   ########.fr       */
+/*   Updated: 2026/03/02 19:30:25 by Guille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& o
         AForm::operator=(other);
         _target = other._target;
     }
-    return (*this);
+    return *this;
 }
 
 RobotomyRequestForm::~RobotomyRequestForm() {}

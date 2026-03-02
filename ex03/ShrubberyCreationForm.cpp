@@ -6,7 +6,7 @@
 /*   By: Guille <Guille@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 19:16:01 by Guille            #+#    #+#             */
-/*   Updated: 2026/03/02 23:29:48 by Guille           ###   ########.fr       */
+/*   Updated: 2026/03/02 19:25:49 by Guille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationF
         AForm::operator=(other);
         _target = other._target;
     }
-    return (*this);
+    return *this;
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm() {}

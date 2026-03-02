@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Guille <Guille@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/02 19:15:51 by Guille            #+#    #+#             */
-/*   Updated: 2026/03/02 22:36:41 by Guille           ###   ########.fr       */
+/*   Created: 2026/03/02 19:17:16 by Guille            #+#    #+#             */
+/*   Updated: 2026/03/02 19:17:30 by Guille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRESIDENTIALPARDONFORM_HPP
-#define PRESIDENTIALPARDONFORM_HPP
+
+#ifndef SHRUBBERYCREATIONFORM_HPP
+#define SHRUBBERYCREATIONFORM_HPP
 
 #include "AForm.hpp"
 #include <string>
 
-class PresidentialPardonForm : public AForm
+class ShrubberyCreationForm : public AForm
 {
 	private:
 		std::string _target;
 
 	public:
-		PresidentialPardonForm(const std::string& target);
-		PresidentialPardonForm(const PresidentialPardonForm& other);
-		PresidentialPardonForm& operator=(const PresidentialPardonForm& other);
-		virtual ~PresidentialPardonForm();
+		ShrubberyCreationForm(const std::string& target);
+		ShrubberyCreationForm(const ShrubberyCreationForm& other);
+		ShrubberyCreationForm& operator=(const ShrubberyCreationForm& other);
+		~ShrubberyCreationForm();
 
 		virtual void executeAction() const;
 };
 
-#endif
+#endif 

@@ -6,7 +6,7 @@
 /*   By: Guille <Guille@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 19:15:47 by Guille            #+#    #+#             */
-/*   Updated: 2026/03/02 23:29:18 by Guille           ###   ########.fr       */
+/*   Updated: 2026/03/02 19:30:58 by Guille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPard
         AForm::operator=(other);
         _target = other._target;
     }
-    return (*this);
+    return *this;
 }
 
 PresidentialPardonForm::~PresidentialPardonForm() {}
