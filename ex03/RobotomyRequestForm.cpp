@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Guille <Guille@student.42.fr>              +#+  +:+       +#+        */
+/*   By: guigonza <guigonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 19:15:55 by Guille            #+#    #+#             */
-/*   Updated: 2026/03/02 19:30:25 by Guille           ###   ########.fr       */
+/*   Updated: 2026/04/27 17:55:14 by guigonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ RobotomyRequestForm::RobotomyRequestForm(const std::string& target)
     static bool seeded = false;
     if (!seeded)
     {
-        std::srand(static_cast<unsigned>(std::time(nullptr)));
+        std::srand(static_cast<unsigned int>(std::time(NULL)));
         seeded = true;
     }
 }

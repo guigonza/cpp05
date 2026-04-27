@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Guille <Guille@student.42.fr>              +#+  +:+       +#+        */
+/*   By: guigonza <guigonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 12:52:52 by Guille            #+#    #+#             */
-/*   Updated: 2026/03/02 16:36:36 by Guille           ###   ########.fr       */
+/*   Updated: 2026/04/27 18:32:44 by guigonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,16 @@ int main(void)
 	std::cout << "======== Creation and printing whith operator =======\n" << std::endl;
 	{
 		Bureaucrat A("Alice", 42);
+		try {
+			
+			Bureaucrat B("Ali", 200);
+			Bureaucrat C("Ce", 0);
+			Bureaucrat D("DOO", -42);
+		}
+		catch (const std::exception& e)
+		{
+			std::cerr << e.what();
+		}
 		std::cout << A;
 	}
 	std::cout << "\n======== Try/catch high and low =======\n" << std::endl;
@@ -24,7 +34,6 @@ int main(void)
 	try
 	{
 		Bureaucrat TooHigh("Super Boss", 0);
-		//try to create a bureaucraat and fails that`s why doesn`t prints next row
 		std::cout << TooHigh << std::endl;
 	}
 	catch (const std::exception& ex)
@@ -34,7 +43,6 @@ int main(void)
 		try
 	{
 		Bureaucrat TooLow("Intern", 151);
-		//try to create a bureaucraat and fails that`s why doesn`t prints next row
 		std::cout << TooLow << std::endl;
 	}
 	catch (const std::exception& ex)
